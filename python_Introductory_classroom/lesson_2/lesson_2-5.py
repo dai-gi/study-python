@@ -23,7 +23,7 @@ tkinter.Label(None, text="Hello").pack()
 # VScodeにて、ターミナルでpythonファイルを実行するが、実行結果が表示されない
 # ターミナルにて、インタラクティブモードで入力すると、実行結果がちゃんと表示される 
 import tkinter
-tkinter.Label(None, text="World").pack()
+tkinter.Label(None, text="World").pack() 
 # VScodeにて、ターミナルでpythonファイルを実行するが、実行結果が表示されない
 # ターミナルにて、インタラクティブモードで入力すると、実行結果がちゃんと表示される 
 
