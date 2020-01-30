@@ -21,8 +21,8 @@ tkinter.Label(None, text="Hello").pack()
 # ターミナルでpythonファイルのボタンを押すが、実行結果が教材通りにウィンドウが表示されない。
 # インタラクティブモードで入力すると、実行結果がちゃんと表示される。
 
-import tkinter
-tkinter.Label(None, text="World").pack() 
+# import tkinter
+# tkinter.Label(None, text="World").pack() 
 # ターミナルでpythonファイルのボタンを押すが、実行結果が教材通りにウィンドウが表示されない。
 # インタラクティブモードで入力すると、実行結果がちゃんと表示される。
 
