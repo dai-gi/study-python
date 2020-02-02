@@ -22,9 +22,11 @@ for i in range( 1 , 5 + 1 ):
 else:
     print("この処理を終了する")
 
-# 繰り返しが終わったときに実行する else
-a = "処理を繰り返す"
-while True :
-    print(a)
-else:
-    print("この処理を終了する")
+
+# 条件分岐する　if構文
+# coding:utf-8
+for i in range(1,10+1):
+    if i <= 5:
+        print("小さいです")
+    else:
+        print("大きいです")
