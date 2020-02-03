@@ -1,4 +1,5 @@
 # 条件分岐する　if構文
+
 # coding:utf-8
 for i in range(1,10+1):
     if i <= 5:
@@ -7,6 +8,7 @@ for i in range(1,10+1):
         print("大きいです")
 
 # 条件を組み合わせる
+
 # coding:utf-8
 for i in range(1,10+1):
     print(i)
@@ -28,8 +30,8 @@ Pythonには、「倍数かどうか」を調べる命令は存在しません�
 """
 
 # elifを使って「でないときの条件」を並べる
-
 # ifとelseだけの場合
+
 # coding:utf-8
 for a in range(1,36+1):
     print(a)
@@ -71,6 +73,33 @@ for i in range(1,36+1):
         print("×")
     else:
         print("☆")
+
+# 条件が成り立ったときに繰り返しをやめる
+# 永遠に繰り返すを「break」を使って止める
+
+# coding:utf-8
+total = 0
+a = 1
+while True:
+    total = total + a
+    a = a + 1
+    if total > 50:
+        break
+print(total)
+
+# Pythonには「何もしない文」が用意されている
+
+# coding:utf-8
+total = 0
+a = 0
+while total <= 50:
+    total = total + a
+    a = a + 1
+    if total <= 50:
+        pass
+    
+
+
 
 
 
