@@ -97,7 +97,7 @@ while total <= 50:
     a = a + 1
     if total <= 50:
         pass
-    
+    else:　# elseを記入するとエラーが出る
 
 
 
