@@ -98,8 +98,3 @@ while total <= 50:
     if total <= 50:
         pass
     else:　# elseを記入するとエラーが出る
-
-
-
-
-
