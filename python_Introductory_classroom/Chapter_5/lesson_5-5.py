@@ -8,9 +8,9 @@ a =[random.randint(0,9),
     random.randint(0,9),
     random.randint(0,9),
     random.randint(0,9)]
-
+print("a",a)
 # テストのための答えを表示
-print(str(a[0]) + str(a[1]) + str(a[2]) + str(a[3]))
+# print(str(a[0]) + str(a[1]) + str(a[2]) + str(a[3]))
 
 while True :
 # 4桁の数字かどうかを判定
