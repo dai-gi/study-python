@@ -12,6 +12,7 @@ label1.place(x = 20, y = 20)
 editbox1 = tk.Entry(width = 4, font=("Helvetica", 28))
 editbox1.place(x = 120, y = 60)
 
+# ボタンを配置
 button1 = tk.Button(root, text = "チェック", font=("Helvetica", 30))
 button1.place(x = 220, y = 60)
 
