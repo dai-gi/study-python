@@ -4,7 +4,7 @@
 import tkinter as tk
 
 
-root = tk.Tk()
+root = tk.Tk() 
 root.geometry("400x150")
-root.title("数当てゲーム")
-root.mainloop()
+root.title("数当てゲーム") # タイトルを作成
+root.mainloop() 
