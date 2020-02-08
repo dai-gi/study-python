@@ -6,6 +6,7 @@ root = tk.Tk()
 root.geometry("400x150")
 root.title("数当てゲーム")
 
+# ウィンドウにメッセージを決めて表示
 label1 = tk.Label(root, text="数を入力してね")
 label1.place(x = 20, y = 20)
 
