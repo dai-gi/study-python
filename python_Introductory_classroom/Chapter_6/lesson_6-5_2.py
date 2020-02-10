@@ -1,4 +1,4 @@
-# ゲーム【ヒット&ブロー】
+# ヒット&ブローの値判定を作る
 # coding:utf-8
 import random
 import tkinter as tk
