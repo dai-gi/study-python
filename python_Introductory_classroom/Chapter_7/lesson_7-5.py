@@ -16,7 +16,7 @@ def move():
     x = x + dx
     # 次の位置に円を動かす
     canvas.create_oval(x - 20, y - 20, x + 20, y + 20, fill="red", width=0)
-    # 恥を超えていたら反対向きにする
+    # 端を超えていたら反対向きにする
     if x >= canvas.winfo_width():
         dx = -1
     if x <= 0:
