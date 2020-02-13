@@ -1,8 +1,3 @@
-# スタートボタンで実行 → エラー = (bash: syntax error near unexpected token `(')
-# インタラクティブで実行 → 正常
-# 個々を選択して実行する →　正常
-
-
 # 四則演算
 test_integer = 100
 
