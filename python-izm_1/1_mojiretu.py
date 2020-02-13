@@ -1,8 +1,3 @@
-# スタートボタンで実行 → エラー = (bash: syntax error near unexpected token `(')
-# インタラクティブで実行 → 正常
-# 個々を選択して実行する →　正常
-
-
 # 文字列の基礎
 print('python-izm')
 print("python-izm")
