@@ -28,6 +28,9 @@ class Ball:
         if self.y <= 0:
             self.dy = 3
 
+    def test(self, canvas):
+        print("test")
+
 # 円を複数作る
 balls = [
     Ball(400, 300, 1, 1, "red"),
@@ -38,7 +41,7 @@ balls = [
 def loop():
     # 動かす
     for b in balls:
-        b.move(canvas)
+        b.test(canvas)
     # もう一回
     root.after(10,loop)
 
