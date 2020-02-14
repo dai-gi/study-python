@@ -37,6 +37,23 @@ class Rectangle(Ball):
         canvas.create_rectangle(self.x -20, self.y -20, self.x +20, self.y + 20, fill="white", width=0)
     def draw(self, canvas):
         canvas.create_rectangle(self.x -20, self.y -20, self.x +20, self.y +20, fill=self.color, width=0)
+    def move(self, canvas):
+        # いまの円を消す
+        self.erase(canvas)
+        # X座標、Y座標を動かす
+        self.x = self.x + self.dx
+        self.y = self.y + self.dy
+        # 次の位置に円を描画する
+        self.draw(canvas)
+        # 端を超えていたら反対向きにする
+        if (self.x >= canvas.winfo_width()):
+            self.dx = -9
+        if (self.x <= 0):
+            self.dx = 9
+        if (self.y >= canvas.winfo_height()): 
+            self.dy = -9
+        if (self.y <= 0):
+            self.dy = 9
 
 class Triangle(Ball):
     def erase(self, canvas):
