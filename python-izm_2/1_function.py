@@ -8,17 +8,17 @@
 
 
 # 関数
-def test_func():
-    print(1)
+def test_func(a):
+    print(a)
 
 class TestClass:
     # メソッド
-    def test_method():
-        print(1)
+    def test_method(a):
+        print(a)
 
-test_func()
+test_func(2)
 print('-----------------')
-TestClass.test_method()
+TestClass.test_method(1)
 
 print('=================')
 print(type(test_func))
