@@ -28,18 +28,18 @@
 # for key, value in pv_data.items():
 #     print(key, value['pv'], value['author'])
 
-# # 辞書の要素の取り出し
-# sk = {'first_name': 'shinji', 'family_name': 'kawasaki', 'weight': 80}
-# print(sk['first_name'])
+# # 辞書の要素の取り出し                                                                                良く使う
+sk = {'first_name': 'shinji', 'family_name': 'kawasaki', 'weight': 80}  
+print(sk['family_name'])
 
 # sk = {'first_name': 'shinji', 'family_name': 'kawasaki', 'weight': 80}
 # print(sk['age'])  # 年齢はこのデータには含まれていない
 
 # # getメソッド
-# sk = {'first_name': 'shinji', 'family_name': 'kawasaki', 'weight': 80}
-# print(sk.get('first_name'))  # 存在するキーを指定
-# print(sk.get('age'))         # 存在しないキーを指定
-# print(sk.get('age', 'not found'))  # 存在しないキーと、デフォルト値を指定
+sk = {'first_name': 'shinji', 'family_name': 'kawasaki', 'weight': 80}
+print(sk.get('first_name'))  # 存在するキーを指定
+print(sk.get('age'))         # 存在しないキーを指定
+print(sk.get('age', 'not found'))  # 存在しないキーと、デフォルト値を指定
 
 # # 辞書の項目の変更と追加
 # sk['family_name'] = 'okazaki'
@@ -122,9 +122,9 @@
 # print(f'top article url: {top_article_url}')
 
 # 辞書のキーはイミュータブル
-key_tuple1 = (1, 2)
-key_tuple2 = ([0, 1], [2, 3])  # タプルの要素のリストは変更可能
+# key_tuple1 = (1, 2)
+# key_tuple2 = ([0, 1], [2, 3])  # タプルの要素のリストは変更可能
 
-mydict1 = {key_tuple1: 'foo'}
-mydict2 = {key_tuple2: 'bar'}  # エラー
+# mydict1 = {key_tuple1: 'foo'}
+# mydict2 = {key_tuple2: 'bar'}  # エラー
 
