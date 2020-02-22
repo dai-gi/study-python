@@ -25,15 +25,15 @@
 # print(instance.count)
 # print(MyClass.count)
 
-# class MyClass:
-#     count = 0
+class MyClass:
+    count = 0
 
-#     def __init__(self):
-#         self.count += 1
-#         print(f'you made {MyClass.count} instance(s)')
+    def __init__(self):
+        self.count += 1
+        print(f'you made {self.count} instance(s)')
 
-# instance1 = MyClass()
-# instance2 = MyClass()
+instance1 = MyClass()
+instance2 = MyClass()
 
 # class MyClass:
 #     count = 0
@@ -79,23 +79,23 @@
 # instance1.get_count()
 
 # スタティックメソッド
-class MyClass:
-    count = 0
+# class MyClass:
+#     count = 0
 
-    def __init__(self):
-        MyClass.count += 1
-        print(f'you made {MyClass.count} instance(s)')
+#     def __init__(self):
+#         MyClass.count += 1
+#         print(f'you made {MyClass.count} instance(s)')
 
-    @classmethod  # クラスメソッドの定義
-    def get_count(cls):
-        cls.another_get_count()
+#     @classmethod  # クラスメソッドの定義
+#     def get_count(cls):
+#         cls.another_get_count()
 
-    another_get_count = classmethod(lambda cls: print('count:', cls.count))
+#     another_get_count = classmethod(lambda cls: print('count:', cls.count))
 
-    @staticmethod
-    def static_get_count():
-        print('count:', MyClass.count)
+#     @staticmethod
+#     def static_get_count():
+#         print('count:', MyClass.count)
 
-MyClass.static_get_count()
-instance = MyClass()
-instance.static_get_count()
+# MyClass.static_get_count()
+# instance = MyClass()
+# instance.static_get_count()
