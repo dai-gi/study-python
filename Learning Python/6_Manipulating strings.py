@@ -76,10 +76,18 @@
 # print(sample_str.rindex('find'))
 # print(sample_str.index('foo'))
 
-# # splitメソッド
+# # splitメソッド　　　　　　　　　　　　　　　　　　splitは良く使う
 # 'abc def ghi'.split(' ')
-
+# test = 'abc def ghi'.split(' ')
+# print(test)
 # 'abc def ghi'.split(' ', 1)
+# test = 'abc def ghi'.split(' ', 1)
+# print(test)
+
+# 'abc_def_ghi'.split('_')
+# test = 'abc_de_f_ghi'.split('_')
+# print(test)
+# print(test[2])
 
 # # joinメソッド
 # alpha_list = 'abc def ghi'.split()
@@ -92,7 +100,7 @@
 # alpha_list = ''.join(alpha_list)
 # print(alpha_list)
 
-# # strip / lstrip / rstripメソッド
+# # strip / lstrip / rstripメソッド　　　　　　　　
 # data = 'abc, def, ghi'
 # data_list = data.split(',')
 # print(data_list)
@@ -119,9 +127,11 @@
 #     num = int(user_input)
 # print(num)
 
-# replace／swapcase／title／lower／upperメソッド
-# sample_str = 'abc def GHI JKL'
-# print(sample_str.replace('abc', 'xyz'))
+# replace／swapcase／title／lower／upperメソッド　　　　　 replaceは良く使う
+sample_str = 'abc def GHI JKL'
+print(sample_str.replace('abc', 'xyz'))
+print(sample_str.replace(' ', ''))
+
 # print(sample_str.swapcase())
 # print(sample_str.title())
 # print(sample_str.lower())
@@ -137,7 +147,7 @@
 # print(sample_str.endswith(('sample', 'ing')))
 
 # ljust／center／rjustメソッド
-sample_str = 'Python'
-print(sample_str.ljust(12, '+'))
-print(sample_str.center(12, '*'))
-print(sample_str.rjust(12))
+# sample_str = 'Python'
+# print(sample_str.ljust(12, '+'))
+# print(sample_str.center(12, '*'))
+# print(sample_str.rjust(12))
