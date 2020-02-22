@@ -26,22 +26,22 @@
 
 # # 関数の名前
 # # FizzBuzzの答えを返す関数
-# def fizzbuzz(number):
-#     result = str(number)
-#     if number % 3 and not number % 5:
-#         result = 'FizzBuzz'
-#     elif number % 3 == 0:
-#         result = 'Fizz'
-#     elif number % 5 == 0:
-#         result = 'Buzz'
-#     return result
+def fizzbuzz(number):
+    result = str(number)
+    if number % 3 and number % 5:
+        result = 'FizzBuzz'
+    elif number % 3 == 0:
+        result = 'Fizz'
+    elif number % 5 == 0:
+        result = 'Buzz'
+    return result
 
-# number = input('何か数値を入れてください:')
-# number = int(number)
+number = input('何か数値を入れてください:')
+number = int(number)
 
-# print(fizzbuzz(number))
+print(fizzbuzz(number))
 
-print(some_func())
+# print(some_func())
 
-def some_func():
-    print('you nalled some_func')
+# def some_func():
+#     print('you nalled some_func')
