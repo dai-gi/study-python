@@ -128,9 +128,9 @@
 # print(num)
 
 # replace／swapcase／title／lower／upperメソッド　　　　　 replaceは良く使う
-sample_str = 'abc def GHI JKL'
-print(sample_str.replace('abc', 'xyz'))
-print(sample_str.replace(' ', ''))
+# sample_str = 'abc def GHI JKL'
+# print(sample_str.replace('abc', 'xyz'))
+# print(sample_str.replace(' ', ''))
 
 # print(sample_str.swapcase())
 # print(sample_str.title())
@@ -147,7 +147,7 @@ print(sample_str.replace(' ', ''))
 # print(sample_str.endswith(('sample', 'ing')))
 
 # ljust／center／rjustメソッド
-# sample_str = 'Python'
-# print(sample_str.ljust(12, '+'))
-# print(sample_str.center(12, '*'))
-# print(sample_str.rjust(12))
+sample_str = 'Python'
+print(sample_str.ljust(12, '+'))
+print(sample_str.center(12, '*'))
+print(sample_str.rjust(12))
