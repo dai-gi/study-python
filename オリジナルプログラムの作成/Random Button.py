@@ -4,67 +4,66 @@
 import random
 import tkinter as tk
 import tkinter.messagebox as tmsg
+# from functools import partial
 
-# classで「Buttons関数」を作成
-class Buttons:
-    def __init__(self, random):
-        self.x = random
-        print(self.x)
-    # def ButtonClick(self,random):
-        # tmsg.showinfo("ボタンが押されました")
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+        
+        # ラベルを作成
+        self.label1 = tk.Label(master, text="ボタン当ててね", font = ('Helvetica', 28))
+        self.label1.place(x = 105, y = 35)
 
+        # 履歴を表示
+        self.rirekibox = tk.Text(master, font=("Helvetica", 14))
+        self.rirekibox.place(x=500, y=0, width=200, height=500)
 
-# 9個の変数に9個の整数を代入する
-a, b, c, d, e, f, g, h, i  = 1, 2, 3, 4, 5, 6, 7, 8, 9
+        self.random = random.randint(1, 9)
 
-# for文を使用してButton1に整数の入った9個の変数を代入をする
-for Button1 in (a, b, c, d, e, f, g, h, i):
-    pass
+    # def Button1Click():
+    #         # prayer = “グー”
+    #         # tmsg.showinfo(“あなたの手”,”グーを選択しました。”)9
+    #         #双方の手を条件式で勝敗判定、勝敗とメッセージを出力する
+    #     if self.random == self.button1:
+    #         tmsg.showinfo("正解")
+    #     elif self.random != self.button1:
+    #         tmsg.showinfo("不正解")
+    #     else:
+    #         pass
 
-# 9個の変数をランダムに選ぶ
-Button1 = random.randint(a, i)
+        # 9個のボタンを作成
+        # 1段目
+        self.button1 = tk.Button(master, text = ' 1 ', font=('Helvetica',80),command=Button1Click(self.click_button,'1'))
+        self.button1.place(x = 100, y = 130)
+        self.button2 = tk.Button(master, text = ' 2 ', font=('Helvetica',80),command=Button2Click(self.click_button,'2'))
+        self.button2.place(x = 200, y = 130)
+        self.button3 = tk.Button(master, text = ' 3 ', font=('Helvetica',80),command=Button3Click(self.click_button,'3'))
+        self.button3.place(x = 300, y = 130)
+        # 2段目
+        self.button4 = tk.Button(master, text = ' 4 ', font=('Helvetica',80),command=Button4Click(self.click_button,'4'))
+        self.button4.place(x = 100, y = 230)
+        self.button5 = tk.Button(master, text = ' 5 ', font=('Helvetica',80),command=Button5Click(self.click_button,'5'))
+        self.button5.place(x = 200, y = 230)
+        self.button6 = tk.Button(master, text = ' 6 ', font=('Helvetica',80),command=Button6Click(self.click_button,'6'))
+        self.button6.place(x = 300, y = 230)
+        # 3段目
+        self.button7 = tk.Button(master, te65 = ' 7 ', font=('Helvetica',80),command=Button7Click(self.click_button,'7'))
+        self.button7.place(x = 100, y = 330)
+        self.button8 = tk.Button(master, tex6 = ' 8 ', font=('Helvetica',80),command=Button8Click(self.click_button,'8'))
+        self.button8.place(x = 200, y = 330)
+        self.button9 = tk.Button(master, text = ' 9 ', font=('Helvetica',80),command=Button9Click(self.click_button,'9'))
+        self.button9.place(x = 300, y = 330)
 
-print('===================================')
-Buttons(Button1)
+    # ボタンが押された時の処理
+    def click_button(self,num): 
+        self.rirekibox.insert(tk.END, num + "\n")
+
 
 # ウィンドウを作成する
 root = tk.Tk()
-root.geometry('500x500')
+root.geometry('700x500')
 root.title('Random Button')
+app = Application(master=root)
+app.mainloop()
 
-# ラベルを作成
-label1 = tk.Label(root, text="ボタンを押して下さい", font = ('Helvetica', 28))
-label1.place(x = 105, y = 35)
-
-# 9個のボタンを作成
-# 1段目
-button1 = tk.Button(root, text = ' 1 ', font=('Helvetica',80), command=Buttons)
-button1.place(x = 100, y = 130)
-# button1 = tk.Button(root, text = ' 2 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 200, y = 130)
-# button1 = tk.Button(root, text = ' 3 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 300, y = 130)
-
-# # 2段目
-# button1 = tk.Button(root, text = ' 4 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 100, y = 230)
-# button1 = tk.Button(root, text = ' 5 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 200, y = 230)
-# button1 = tk.Button(root, text = ' 9 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 300, y = 230)
-
-# # 3段目
-# button1 = tk.Button(root, text = ' 7 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 100, y = 330)
-# button1 = tk.Button(root, text = ' 8 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 200, y = 330)
-# button1 = tk.Button(root, text = ' 9 ', font=('Helvetica',80), command=Buttons)
-# button1.place(x = 300, y = 330)
-
-
-
-
-
-
-# ウィンドウを表示する
-root.mainloop()
