@@ -4,7 +4,9 @@
 import random
 import tkinter as tk
 import tkinter.messagebox as tmsg
-# from functools import partial
+from functools import partial
+
+
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -21,39 +23,38 @@ class Application(tk.Frame):
 
         self.random = random.randint(1, 9)
 
-    # def Button1Click():
-    #         # prayer = “グー”
-    #         # tmsg.showinfo(“あなたの手”,”グーを選択しました。”)9
-    #         #双方の手を条件式で勝敗判定、勝敗とメッセージを出力する
-    #     if self.random == self.button1:
-    #         tmsg.showinfo("正解")
-    #     elif self.random != self.button1:
-    #         tmsg.showinfo("不正解")
-    #     else:
-    #         pass
-
         # 9個のボタンを作成
         # 1段目
-        self.button1 = tk.Button(master, text = ' 1 ', font=('Helvetica',80),command=Button1Click(self.click_button,'1'))
+        self.button1 = tk.Button(master, text = ' 1 ', font=('Helvetica',80),command=partial(self.click_button,'1'))
         self.button1.place(x = 100, y = 130)
-        self.button2 = tk.Button(master, text = ' 2 ', font=('Helvetica',80),command=Button2Click(self.click_button,'2'))
+        self.button2 = tk.Button(master, text = ' 2 ', font=('Helvetica',80),command=partial(self.click_button,'2'))
         self.button2.place(x = 200, y = 130)
-        self.button3 = tk.Button(master, text = ' 3 ', font=('Helvetica',80),command=Button3Click(self.click_button,'3'))
+        self.button3 = tk.Button(master, text = ' 3 ', font=('Helvetica',80),command=partial(self.click_button,'3'))
         self.button3.place(x = 300, y = 130)
         # 2段目
-        self.button4 = tk.Button(master, text = ' 4 ', font=('Helvetica',80),command=Button4Click(self.click_button,'4'))
+        self.button4 = tk.Button(master, text = ' 4 ', font=('Helvetica',80),command=partial(self.click_button,'4'))
         self.button4.place(x = 100, y = 230)
-        self.button5 = tk.Button(master, text = ' 5 ', font=('Helvetica',80),command=Button5Click(self.click_button,'5'))
+        self.button5 = tk.Button(master, text = ' 5 ', font=('Helvetica',80),command=partial(self.click_button,'5'))
         self.button5.place(x = 200, y = 230)
-        self.button6 = tk.Button(master, text = ' 6 ', font=('Helvetica',80),command=Button6Click(self.click_button,'6'))
+        self.button6 = tk.Button(master, text = ' 6 ', font=('Helvetica',80),command=partial(self.click_button,'6'))
         self.button6.place(x = 300, y = 230)
         # 3段目
-        self.button7 = tk.Button(master, te65 = ' 7 ', font=('Helvetica',80),command=Button7Click(self.click_button,'7'))
+        self.button7 = tk.Button(master, te65 = ' 7 ', font=('Helvetica',80),command=partial(self.click_button,'7'))
         self.button7.place(x = 100, y = 330)
-        self.button8 = tk.Button(master, tex6 = ' 8 ', font=('Helvetica',80),command=Button8Click(self.click_button,'8'))
+        self.button8 = tk.Button(master, tex6 = ' 8 ', font=('Helvetica',80),command=partial(self.click_button,'8'))
         self.button8.place(x = 200, y = 330)
-        self.button9 = tk.Button(master, text = ' 9 ', font=('Helvetica',80),command=Button9Click(self.click_button,'9'))
+        self.button9 = tk.Button(master, text = ' 9 ', font=('Helvetica',80),command=partial(self.click_button,'9'))
         self.button9.place(x = 300, y = 330)
+
+
+    
+        if self.random == self.button1:
+            tmsg.showinfo("正解")
+        elif self.random != self.button1:
+            tmsg.showinfo("不正解")
+        else:
+            pass
+
 
     # ボタンが押された時の処理
     def click_button(self,num): 
