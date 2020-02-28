@@ -1,45 +1,39 @@
-# print(type('a'))
+import tkinter as tk
+import tkinter.messagebox as tmsg
 
-from math import sqrt
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+        self.create_widgets()
 
-class Point:
-    def __init__(self, x = 0.0, y = 0.0):
-        self.x = x
-        self.y = y
-        print(self.x)
-        print(self.y)
-#     def difference(self, point=None):
-#         if not point:
-#             point = Point()
-#         return sqrt((self.x - point.x) **2 + (self.y - point.y) **2)
-# print(sqrt)
+    def create_widgets(self):
+        self.hi_there = tk.Button(self)
+        self.hi_there["text"] = "Hello World\n(click me)"
+        self.hi_there["command"] = self.say_hi
+        self.hi_there.pack(side="left")
+        
+        self.hi_there2 = tk.Button(self)
+        self.hi_there2["text"] = "Hello World2\n(click me)"
+        self.hi_there2["command"] = self.say_hi2
+        self.hi_there2.pack(side="right")
+        
 
+        self.quit = tk.Button(self, text="QUIT", fg="red",
+                                command=root.destroy)
+        self.quit.pack(side="top")
 
-Point()
+    def say_hi(self):
+        a = "hi there, everyone!"
+        print(tmsg.showinfo("入力されたテキスト", a))
 
-
-'''
-【クラスとは、、、】= 設計図
-int型とは整数という概念を記述した設計図 = クラス 
-「型」= 設計図 = クラス( = 仕組み = 機構)
-そうしたクラスを、Pythonではプログラマーが独自( = 特有 = 専用の型 = 整数型だったり、文字列型だったり )に作成する事が出来る
-
-【オブジェクトとは、、、】プログラムによって作成られた何らかのデータ( = ファイルだったり、ウィンドウだったり、ゲームだったり)
-いちばんやさしいPython入門を拝借して例えると、lesson_7-9で作成したプログラムをVScodeで実行し、コンピュータのメモリに
-作成されたデータ( = ウィンドウが表示され、その中で丸い円が動き回るプログラム)のこと？
-ここで、クラスを自分にとって分かりやすく例えると、クラスとは、オブジェクトを作成するためのプログラム( = classで作成した関数)
-
-【インスタンスとは、、、】プログラムによってメモリ上に作成され、メモリ上に存在する実態である事を強調した言い方
-あるクラスの設計図から作り出され、メモリ上に存在する実態である事を強調する為、「インスタンス」と呼ぶ事がある。
-
-===========================================================================================================
-
-クラスで作成した関数の定義外では、作成した関数の中に、クラスで作成した変数を(第1パラメーターに「self.」と入れても)入れても使うことは出来ない。
-
-''' 
+    def say_hi2(self):
+        b = "hi there, everyone!"
+        print(tmsg.showinfo("入力されたテキスト", b))
 
 
-# def difference(point=None):
-#     if not point:
-#         point = Point()
-#     return sqrt(self, (self.x - point.x) **2 + (self.y - point.y) **2)
+
+
+root = tk.Tk()
+app = Application(master=root)
+app.mainloop()
