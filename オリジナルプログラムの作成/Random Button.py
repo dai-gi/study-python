@@ -39,25 +39,26 @@ class Application(tk.Frame):
         self.button6 = tk.Button(master, text = ' 6 ', font=('Helvetica',80),command=partial(self.click_button,'6'))
         self.button6.place(x = 300, y = 230)
         # 3段目
-        self.button7 = tk.Button(master, te65 = ' 7 ', font=('Helvetica',80),command=partial(self.click_button,'7'))
+        self.button7 = tk.Button(master, text = ' 7 ', font=('Helvetica',80),command=partial(self.click_button,'7'))
         self.button7.place(x = 100, y = 330)
-        self.button8 = tk.Button(master, tex6 = ' 8 ', font=('Helvetica',80),command=partial(self.click_button,'8'))
+        self.button8 = tk.Button(master, text = ' 8 ', font=('Helvetica',80),command=partial(self.click_button,'8'))
         self.button8.place(x = 200, y = 330)
         self.button9 = tk.Button(master, text = ' 9 ', font=('Helvetica',80),command=partial(self.click_button,'9'))
         self.button9.place(x = 300, y = 330)
-
-
     
-        if self.random == self.button1:
-            tmsg.showinfo("正解")
-        elif self.random != self.button1:
-            tmsg.showinfo("不正解")
-        else:
-            pass
+    
+
+    # def hantei():
+    #     if self.random == num:
+    #         tmsg.showinfo("正解")
+    #     elif self.random != num:
+    #         tmsg.showinfo("不正解")
+    #     else:
+    #         pass
 
 
-    # ボタンが押された時の処理
-    def click_button(self,num): 
+        # ボタンが押された時の処理
+    def click_button(self,num):
         self.rirekibox.insert(tk.END, num + "\n")
 
 
