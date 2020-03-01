@@ -21,7 +21,7 @@ class Application(tk.Frame):
         self.rirekibox = tk.Text(master, font=("Helvetica", 14))
         self.rirekibox.place(x=500, y=0, width=200, height=500)
 
-        self.random = random.randint(1, 9)
+        
 
         # 9個のボタンを作成
         # 1段目
@@ -46,20 +46,20 @@ class Application(tk.Frame):
         self.button9 = tk.Button(master, text = ' 9 ', font=('Helvetica',80),command=partial(self.click_button,'9'))
         self.button9.place(x = 300, y = 330)
     
-    
-
-    # def hantei():
-    #     if self.random == num:
-    #         tmsg.showinfo("正解")
-    #     elif self.random != num:
-    #         tmsg.showinfo("不正解")
-    #     else:
-    #         pass
-
-
         # ボタンが押された時の処理
     def click_button(self,num):
-        self.rirekibox.insert(tk.END, num + "\n")
+
+        self.random = random.randint(1, 3)
+        
+        # 押下したボタンを判定
+        if self.random == int(num):
+            tmsg.showinfo("正解")
+            self.rirekibox.insert(tk.END, num +'  '+"正解"+"\n")
+        elif self.random != int(num):
+            self.rirekibox.insert(tk.END, num +'  '+"不正解"+"\n")
+            tmsg.showinfo("不正解")
+        else:
+            pass
 
 
 # ウィンドウを作成する
