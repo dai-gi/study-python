@@ -21,6 +21,8 @@ class Application(tk.Frame):
         self.rirekibox = tk.Text(master, font=("Helvetica", 14))
         self.rirekibox.place(x=255, y=75, width=90, height=200)
 
+        # self.delete(0, tk.END)
+
 
         # ４つのボタン
         self.button1 = tk.Button(master, text = ' 1 ', font=('Helvetica',80),command=partial(self.click_button,'1'))
@@ -34,7 +36,7 @@ class Application(tk.Frame):
         
         # ボタンが押された時の処理
     def click_button(self,num):
-
+        
         self.random = random.randint(1, 4)
 
         # 押下したボタンを判定
@@ -54,8 +56,8 @@ root = tk.Tk()
 # root.wm_attributes("-transparent", True)
 root.geometry('400x350')
 root.title('Random Button')
-
-
+root.delete(0, tk.END, text = 'reset', font=('Helvetica',20))
+root.button4.place(x = 165, y =370)
 # pyui.init(400,300)
 # pyui.run()
 
