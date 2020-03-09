@@ -46,17 +46,20 @@ class Application(tk.Frame):
     def create_sub_window(self,answer):
         u""" Tk() と同じような感じで使える """
         sub_win = tk.Toplevel(master = self.master)
-        sub_win.title("modal dialog")
         sub_win.geometry("300x300")
 
         tk.Button(sub_win, text = answer, command = sub_win.destroy).pack()
         img = Image.open('test.png')
         img = ImageTk.PhotoImage(img)
         # 画像を表示するためのキャンバスの作成（黒で表示）
-        canvas_img = tk.Canvas(sub_win, width=400, height=300)
+        canvas_img = tk.Canvas(sub_win, width=400, height=350)
         canvas_img.grid(row=0, column=0) # 左上の座標を指定
         # キャンバスに画像を表示する。第一引数と第二引数は、x, yの座標
         canvas_img.create_image(0, 0, image=img, anchor=tk.NW)
+        
+        if self.random == int(num):
+            sub_win.title
+
 
 
     def click_button(self,num):
@@ -70,7 +73,7 @@ class Application(tk.Frame):
         elif self.random != int(num):
             self.rirekibox.insert(tk.END, '  ' + num + ' : ' + "不正解 " + "\n" )
             self.create_sub_window('不正解')
-            
+
     def reset_action(self):
         self.random = random.randint(1, 4)
         self.rirekibox.delete('1.0', 'end')
