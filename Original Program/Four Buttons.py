@@ -48,28 +48,22 @@ class Application(tk.Frame):
         sub_win = tk.Toplevel(master = self.master)
         sub_win.geometry("300x300")
 
-        tk.Button(sub_win, text = answer, command = sub_win.destroy).pack()
-        img = Image.open('test.png')
-        img = ImageTk.PhotoImage(img)
+        # tk.Button(sub_win, text = answer, command = sub_win.destroy).pack()
+        # img = Image.open('test.png')
+        # img = ImageTk.PhotoImage(img)
         # 画像を表示するためのキャンバスの作成（黒で表示）
-        canvas_img = tk.Canvas(sub_win, width=400, height=350)
-        canvas_img.grid(row=0, column=0) # 左上の座標を指定
+        canvas_img = tk.Canvas(sub_win, width=310, height=310 )
+        canvas_img.grid(row=0, column=0)
+        canvas_img.configure(bg='black') # 左上の座標を指定
         # キャンバスに画像を表示する。第一引数と第二引数は、x, yの座標
-        canvas_img.create_image(0, 0, image=img, anchor=tk.NW)
+        # canvas_img.create_image(0, 0, image=img, anchor=tk.NW)
         
-        if self.random == int(num):
-            sub_win.title
-
-
-
     def click_button(self,num):
         
         # 押下したボタンを判定
         if self.random == int(num):
             self.rirekibox.insert(tk.END, '  ' + num + ' : ' + "正解 " + "\n" )
             self.create_sub_window('正解')
-
-
         elif self.random != int(num):
             self.rirekibox.insert(tk.END, '  ' + num + ' : ' + "不正解 " + "\n" )
             self.create_sub_window('不正解')
