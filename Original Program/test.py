@@ -1,26 +1,20 @@
-# # ランダムに1桁の整数を選ぶプログラム
-# # coding:utf-8
-# import tkinter as tk
+# -*- coding:utf-8 -*-
+import sys
+import tkinter
 
-# class Mainwindow(tk.Frame):
+root = tkinter.Tk()
+root.title("タイトル")
+root.geometry("300x300")
 
-#     def __init__(self, master = None, *args, **kwargs):
-#         super().__init__(master)
-#         tk.Button(self, text = 'click me! (Open dialog)',
-#                 command = self.open_dialog).pack()
+# 画像の取得
+img = tkinter.PhotoImage(file='bg.gif')
 
-#     def open_dialog(self):
-#         u""" Tk() と同じような感じで使える """
-#         sub_win = tk.Toplevel(master = self.master)
-#         tk.Button(sub_win, text = 'thank you', command = sub_win.destroy).pack()
+# 画像ウィジェットの配置(1行1列)
+label1 = tkinter.Label(root, image=img)
+label1.grid(row=1, column=1)
 
-# if __name__ == '__main__':
-#     root = tk.Tk()
-#     mainwindow = Mainwindow(master = root)
-#     mainwindow.pack()
-#     root.mainloop()
+# 画像ウィジェットの配置(2行2列)
+# label4 = tkinter.Label(root, image=img)
+# label4.grid(row=10, column=100)
 
-
-
-# coding: utf-8
-
+root.mainloop()
