@@ -35,4 +35,3 @@ print(test_set_1)
 # frozenset
 test_set_1 = frozenset({'python', '-', 'izm', '.', 'com'})
 print(test_set_1)
-
