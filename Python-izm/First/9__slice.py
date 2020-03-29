@@ -27,6 +27,3 @@ print(test_list[:999])
 test_list = ['https', 'www', 'python', 'izm', 'com']
 test_list[0:3] = ('WWW', 'PYTHON')
 print(test_list)
-
-
-
