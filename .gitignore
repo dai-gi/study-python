@@ -1,4 +1,7 @@
-myvenv
+bin
+include
+lib
+pyvenv.cfg
 db.sqlite3
 .vscode
 __pycache__
