@@ -17,5 +17,5 @@ print(True or False) # True
 print(not True) # False
 
 # 文字列の演算
-print("hello " + "world")
-print("hello " * 3)
+print("hello " + "world") # hello world
+print("hello " * 3) # hello hello hello
