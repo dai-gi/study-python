@@ -1,7 +1,8 @@
 # 文字列
 
 s = "he\nllo wor\tld"
-html = """<html>
+# Docstring ↓
+html = """<html> 
 <body></body>
 </html>"""
 print(s)

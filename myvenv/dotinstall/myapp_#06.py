@@ -1,4 +1,6 @@
 # 文字列に値を埋め込む
+
+# f-string ↓
 name = "daisuke"
 score = 52.8
 
