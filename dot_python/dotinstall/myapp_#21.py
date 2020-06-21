@@ -1,15 +1,18 @@
-# モジュールでファイルの分割
-# 別ファイルに書いたコードをモジュールと呼ぶ
-# importで読み込んだ瞬間に別ファイルで書いたモジュールのファイルが実行されてしまう
+# パッケージでモジュールを管理
+# パッケージ = モジュール(モジュールファイル)を入れるフォルダのこと
+# パッケージをpythonで認識させる方法 = __init__.py のファイルを作成する( ※ ファイルの中は何もなくてもOK)
 
-# import user
-# from user import AdminUser # モジュールから指定した関数やクラスだけを読み込む場合の方法
-from user import AdminUser, User # 他のクラスも使いたい場合、カンマ区切りにすれば良い
+# パッケージに入れたモジュールの使用方法 = 「フォルダがモジュール化されたもの」と考えると分かりやすいかも
+# import パッケージ名.モジュールファイル名
+# import mypackage.user
+# importする名前が長い場合、「as」を使えば省略または、名前を変えて使用できる
+# import mypackage.user as mymodule
+# AdminUserクラスだけを使う方法
+from mypackage.user import AdminUser
 
-# bob = user.AdminUser("bob", 23)
-bob = AdminUser("bob", 23) # モジュールから指定したサブクラスなので、モジュール名はいらない
-
-tom = User("tom")
+# bob = mypackage.user.AdminUser("bob", 23)
+# bob = mymodule.AdminUser("bob", 23)
+bob = AdminUser("bob", 23)
 
 print(bob.name)
 bob.say_hi()
