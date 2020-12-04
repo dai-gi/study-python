@@ -1,6 +1,6 @@
 # いちばんやさしいPython入門教室
-# 文字列：P57
 
+# 文字列：P57
 # 「"」と「'」の使い分けは自由
 print("abc") # abc
 print('abc') # abc
@@ -11,7 +11,6 @@ print("abc')
 
 
 # 文字列の連結：P61
-
 # 「+」は連結
 print("abc" + "cde") # abccde
 

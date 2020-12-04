@@ -1,9 +1,8 @@
 # いちばんやさしいPython入門教室
-# 文字化け：P66
 
+# 文字化け：P66
 # 環境によっては文字化けが起こってしまう
 print("abc") # SyntaxError：Non-UTF-8 code starthig ...
-
 """
 対処法：
 
