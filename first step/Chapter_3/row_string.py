@@ -1,6 +1,6 @@
-# いちばんやさしいPython入門教室：P60
-# row string
+# いちばんやさしいPython入門教室
 
+# RowString：P60
 # befor：
 print("\10,000") # ,000
 # row stringを利用しない場合の対処法
