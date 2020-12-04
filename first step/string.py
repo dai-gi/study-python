@@ -4,6 +4,7 @@
 目次
 
 ・文字列
+・RowString
 ・文字列の連結
 　−「+」は連結
 　-「＊」は繰り返し
@@ -25,6 +26,18 @@ print('abc') # abc
 # NG例
 print("abc') 
 # 出力結果：SyntaxError: EOL while scanning string literal
+
+
+# RowString：P60
+# befor：
+print("\10,000") # ,000
+# row stringを利用しない場合の対処法
+print("\\10,000") # \10,000
+
+# after：
+# row stringを利用することで「¥」と「\」を特殊文字として扱わなくなる。
+print(r"\10,000") # \10,000
+
 
 
 # 文字列の連結：P61
