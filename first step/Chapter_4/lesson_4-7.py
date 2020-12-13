@@ -1,8 +1,10 @@
-# asでモジュールを読み込む
+# いちばんやさしいPython入門教室
+# calendarモジュール
 
-import calendar as cal
+# as
+import calendar as cal # <- 「as」を使うとモジュール名を変更する事ができる
 print(cal.month(2020,1))
 
-# fromでモジュール名を書かずに済むようにする    
+# from
 from calendar import month
-print(month(2020,1))
+print(month(2020,1)) # <- 「from」を使うとモジュール名を省略できる
