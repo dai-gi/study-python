@@ -39,3 +39,33 @@ for i in "Hello":
 # l
 # l
 # o
+
+# else
+"""
+＊最後に一回だけ実行したい処理を書きたいときに使う
+
+for i in シーケンス:
+    print(i)
+else:
+    繰り返しが終わったときに実行する文
+"""
+
+# break
+"""
+＊途中で処理を止めたいときに使う
+
+for i in シーケンス:
+    print(i)
+    if 条件式:
+        break
+"""
+
+# continue
+"""
+＊特定の処理だけスキップしたいときに使う
+
+for i in シーケンス:
+    if 条件式:
+        continue
+    print(i)
+"""
