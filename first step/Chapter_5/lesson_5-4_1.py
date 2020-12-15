@@ -1,7 +1,9 @@
+# いちばんやさしいPython入門教室
 # 4桁の文字を入力できるようにする
-
 # coding:utf-8
+
 import random
+
 #4桁であることをチェックする
 isok = False
 while isok == False:
