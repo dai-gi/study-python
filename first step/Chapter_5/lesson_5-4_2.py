@@ -1,6 +1,7 @@
-# ループ処理で判定をもう少し簡単にしたプログラム
-
+# いちばんやさしいPython入門教室
+# ループ処理で判定を簡略化
 # coding:utf-8
+
 import random
 
 isok = False
@@ -10,6 +11,7 @@ while isok == False:
         print("4桁の数字を入力してください")
     else:
         kazuok = True
+        # ループ処理に変更
         for i in range(4):
             if (b[i] <"1") or (b[i] > "9"):
                 print("数字ではありません")
