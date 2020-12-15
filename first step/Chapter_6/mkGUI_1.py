@@ -1,9 +1,8 @@
 # いちばんやさしいPython入門教室
-# ウィンドウのサイズを変更する
+# ウィンドウを表示する
 # coding:utf-8
 
-import tkinter as tk
+import tkinter as t
 
-root = tk.Tk()
-root.geometry("400x150") # ウィンドウのサイズ変更
+root = t.Tk()
 root.mainloop()
