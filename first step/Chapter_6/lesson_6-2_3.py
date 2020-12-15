@@ -1,8 +1,8 @@
+# いちばんやさしいPython入門教室
 # ウィンドウにタイトルを設置する
-
 # coding:utf-8
-import tkinter as tk
 
+import tkinter as tk
 
 root = tk.Tk() 
 root.geometry("400x150")
