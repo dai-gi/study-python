@@ -1,5 +1,7 @@
+# いちばんやさしいPython入門教室
 # ボタンを配置する
 # coding:utf-8
+
 import tkinter as tk
 
 root = tk.Tk()
