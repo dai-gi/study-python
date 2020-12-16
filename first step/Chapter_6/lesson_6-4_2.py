@@ -1,13 +1,15 @@
+# いちばんやさしいPython入門教室
 # メッシージを表示する
 # coding:utf-8
+
 import tkinter as tk 
+# messagebox関数をインポート
 import tkinter.messagebox as tmsg
 
 # ボタンがクリックされたときの処理
 def ButtonClick():
     tmsg.showinfo("テスト", "クリックされたよ")
 
-# メインのプログラム
 root = tk.Tk()
 root.geometry("400x150")
 root.title("数当てゲーム")
