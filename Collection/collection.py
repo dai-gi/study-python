@@ -1,47 +1,41 @@
-# # コレクションの応用
+scores = {'network':60, 'database':80, 'security':60}
 
-# # ディクショナリをリスト・タプル・セットに変換
-# scores = {'network':60, 'database':80, 'security':60}
-# print(list(scores))
-# print(tuple(scores))
-# print(set(scores))
-# print(list(scores.values()))
-# print(tuple(scores.values()))
-# print(set(scores.values()))
+# リストに変換 
+# print(list(scores)) # ['network', 'database', 'security']
+# # ディクショナリの値をリスト化する
+# print(list(scores.values())) # [60, 80, 60]
+# print('-----------')
 
-# print('------------------------------')
-# # ２つのリストからディクショナリを生成
-# key = list(scores)
-# value = list(scores.values())
-# print(key)
-# print(value)
-# print(dict(zip(key, value)))
 
-# print('------------------------------')
-# # コレクションのネスト
-# matsuda_scores = {'network':40, 'database':80}
-# asagi_scores = {'network':50, 'database':70}
+# # タプルに変換
+# print(tuple(scores)) # ('network', 'database', 'security')
+# # ディクショナリの値をタプル化する
+# print(tuple(scores.values())) # ['network', 'database', 'security']
+# print('-----------')
 
-# member_scores = {
-#     '松田':matsuda_scores,
-#     '浅木':asagi_scores
-# }
-# print(member_scores)
 
-# print('------------------------------')
-# 練習問題
-# ２−１
-# (1) ディクショナリ
-# (2) リスト
-# (3) セット
-# (4) セット
-# (5) ディクショナリ
+# # セットに変換
+# print(set(scores)) # {'network', 'security', 'database'}
+# # ディクショナリの値をセット化する
+# print(set(scores.values())) # ['network', 'database', 'security']
+# print('-----------')
 
-# ２−２
-japanease = input('点数を入力して下さい>>')
-count = input('点数を入力して下さい>>')
-science = input('点数を入力して下さい>>')
-social = input('点数を入力して下さい>>')
-english = input('点数を入力して下さい>>')
 
-dic = {'国語':japanease, '算数':count, '理科':science, '社会':social, '英語':english}
+# ２つのリストを使って、ディクショナリを生成する
+# key = list(scores) # ['network', 'database', 'security']
+# value = list(scores.values()) # [60, 80, 60]
+# print(dict(zip(key, value))) # {'network':60, 'database':80, 'security':60}
+# print('-----------')
+
+
+# コレクションのネスト
+matsuda_scores = {'network':40, 'database':80}
+asagi_scores = {'network':50, 'database':70}
+member_scores = {
+    '松田':matsuda_scores, # <- matsuda_scoresディクショナリを値にしている
+    '浅木':asagi_scores # <- asagi_scoresディクショナリを値にしている
+}
+print(member_scores)
+# 出力結果： {'松田': {'network': 40, 'database': 80}, '浅木': {'network': 50, 'database': 70}}
+#               　　　↑↑ 上記のディクショナリ in ディクショナリの状態をネストと言う ↑↑
+print('-----------')
