@@ -3,11 +3,11 @@ dict_1 = {'YEAR':'2010', 'MONTH':'1', 'DAY':'20'}
 print(dict_1) # {'YEAR': '2010', 'MONTH': '1', 'DAY': '20'}
 
 # for文でディクショナリの「key」と「value」を取り出す
-# for i in dict_1:
-#     print(i) # <- key
-#     # ↑↑ 出力結果：'YEAR'
-#     print(dict_1[i]) # <- [i] key を指定して value
-#     # ↑↑ 出力結果：'2010'
+for i in dict_1:
+    print(i) # <- key
+    # ↑↑ 出力結果：'YEAR'
+    print(dict_1[i]) # <- [i] key を指定して value
+    # ↑↑ 出力結果：'2010'
 print('------------------')
 
 
