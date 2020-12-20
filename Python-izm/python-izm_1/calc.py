@@ -1,26 +1,35 @@
 # 四則演算
 test_integer = 100
-print(test_integer + 10)   # 加算（足し算）
-print(test_integer - 10)   # 減算（引き算）
-print(test_integer * 10)   # 乗算（掛け算）
-print(test_integer / 10)   # 除算（割り算）
 
+# 足し算
+print(test_integer + 10) # 100
 
-# 数値へ変換
-test_str = '100'
-print(int(test_str) + 100)
+# 引き算
+print(test_integer - 10) # 90
+
+# 乗算
+print(test_integer * 10) # 1000
+
+# 除算
+print(test_integer / 10) # 10.0
+print('------------------')
 
 
 # 浮動小数点
 test_str = '100.5'
-print(float(test_str) + 100)
+print(float(test_str) + 100) # 200.5
 
 test_float = .5
-print(test_float)
+print(test_float) # 0.5
+print('------------------')
 
-
-# 複素数
+# 虚数(j)・複素数
 test_complex = 100 + 5j
-print(test_complex)
-print(test_complex.real)
-print(test_complex.imag)
+print(test_complex) # (100+5j)
+
+# realメソッド(複素数から実部を取得)
+print(test_complex.real) # 100.0 <- 実部
+
+# imagメソッド(複素数から虚部を取得)
+print(test_complex.imag) # 5.0 <- 虚部
+print('------------------')
