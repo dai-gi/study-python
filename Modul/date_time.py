@@ -4,30 +4,30 @@ import datetime
 today = datetime.date.today()
 todaydetail = datetime.datetime.today()
 
-# # 今日
-# print(today) # 2020-12-20
+# 今日の日付
+print(today) # 2020-12-20
 
-# print(todaydetail) # 2020-12-20 16:56:35.889743
+print(todaydetail) # 2020-12-20 16:56:35.889743
 
-# print(todaydetail.year) # 2020
+print(todaydetail.year) # 2020
 
-# print(today.month) # 12
+print(today.month) # 12
 
-# print(today.day) # 20
+print(today.day) # 20
 
-# print(todaydetail.hour) # 16
+print(todaydetail.hour) # 16
 
-# print(todaydetail.minute) # 56
+print(todaydetail.minute) # 56
 
-# print(todaydetail.second) # 35
+print(todaydetail.second) # 35
 
-# print(todaydetail.microsecond) # 889743
+print(todaydetail.microsecond) # 889743
 
 
-# # 日付のフォーマット
-# print(today.isoformat()) # 2020-12-20
+# 日付のフォーマット
+print(today.isoformat()) # 2020-12-20
 
-# print(todaydetail.strftime("%Y/%m/%d %H:%M:%S")) # 2020/12/20 17:01:30
+print(todaydetail.strftime("%Y/%m/%d %H:%M:%S")) # 2020/12/20 17:01:30
 
 
 # 明日の日付(実行日の日付：2020-12-20)
