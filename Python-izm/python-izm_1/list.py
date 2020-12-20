@@ -1,63 +1,46 @@
-# リスト基本
-test_list_1 = ['python', '-', 'izm', '.', 'com']
-print(test_list_1)
-
-print('-----------------------------------')
-for i in test_list_1:
-    print(i)
+# リスト
+list_1 = ['python','izm',]
+print(list_1) # ['python', 'izm']
+print('------------------')
 
 
-# 要素の追加
-test_list_1 = []
-print(test_list_1)
-
-print('-----------------------------------')
-test_list_1.append('python')
-test_list_1.append('-')
-test_list_1.append('izm')
-test_list_1.append('.')
-test_list_1.append('com')
-print(test_list_1)
+# appendメソッド(要素の追加)
+list_1.append('com')
+print(list_1) # ['python', '-', 'izm', '.', 'com']
+print('------------------')
 
 
 # インデックスを指定して追加
-test_list_1 = ['python', 'izm', 'com']
-print(test_list_1)
-
-print('-----------------------------------')
-test_list_1.insert(1, '-')
-test_list_1.insert(3, '.')
-print(test_list_1)
-
-test_list_1.insert(0, 'http://www.')
-print(test_list_1)
+list_1.insert(0, 'http://www.')
+list_1.insert(2, '-')
+list_1.insert(4, '.')
+print(list_1) # ['http://www.', 'python', '-', 'izm', '.', 'com']
+print('------------------')
 
 
-# 要素の削除１
-test_list_1 = ['1', '2', '3', '2', '1']
-print(test_list_1)
+# popメソッド(要素を取得して削除)
+print(list_1) # ['http://www.', 'python', '-', 'izm', '.', 'com']
+print(list_1.pop(1)) # python
 
-print('-----------------------------------')
-test_list_1.remove('2')
-print(test_list_1)
+print(list_1) # ['http://www.', '-', 'izm', '.', 'com']
+print(list_1.pop()) # com <- インデックスを指定しないとリストの末尾が取得される
 
-
-# 要素の削除２
-test_list_1 = ['1', '2', '3', '2', '1']
-print(test_list_1)
-
-print('----------------------------------')
-print(test_list_1.pop(1))
-print(test_list_1)
-print(test_list_1.pop())
-print(test_list_1)
+print(list_1) # ['http://www.', '-', 'izm', '.']
+print('------------------')
 
 
-# 要素のインデックスを取得
-test_list_1 = ['100', '200', '300', '200', '100']
-print(test_list_1.index('200'))
+# removeメソッド(要素の削除)
+list_1.remove('http://www.') # <- 要素を指定して削除
+print(list_1) # ['-', 'izm', '.']
+print('------------------')
 
 
-# リスト内での要素数を取得
-test_list_1 = ['100', '200', '300', '200', '100']
-print(test_list_1.count('200'))
+# indexメソッド(指定した要素のインデックスを取得)
+print(list_1.index('-')) # 0
+print('------------------')
+
+
+# countメソッド(指定した要素の数を取得)
+list_2 = ['100', '200', '300', '200', '100']
+print(list_2.count('200')) # 2
+print('------------------')
