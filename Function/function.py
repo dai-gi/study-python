@@ -1,24 +1,24 @@
 # いちばんやさしいPython入門教室
 # 関数を定義
-# def tashizan(a, b):
-#     total = 0
-#     for i in range(a, b + 1):
-#         total = total + i
-#     return total
-# result = tashizan(1, 2)
-# print(result)
-# print('-----------')
+def tashizan(a, b):
+    total = 0
+    for i in range(a, b + 1):
+        total = total + i
+    return total
+result = tashizan(1, 2)
+print(result)
+print('-----------')
 
-# # スコープを理解
-# # test関数内で、変数aに再代入することはできない
-# a = "abc" # <- グローバル変数(グローバルスコープ)
-# def test():
-#     a = 1 # <- ローカル変数(ローカルスコープ)　＊関数ないで新しい変数aを生成することになる
-#     print(a)
-#     return
+# スコープを理解
+# test関数内で、変数aに再代入することはできない
+a = "abc" # <- グローバル変数(グローバルスコープ)
+def test():
+    a = 1 # <- ローカル変数(ローカルスコープ)　＊関数ないで新しい変数aを生成することになる
+    print(a)
+    return
 
-# test()
-# print(a)
+test()
+print(a)
 
 # 関数からグローバルスコープにアクセスする
 a = "abc"
