@@ -10,6 +10,7 @@
 ・文字列の置き換え
 ・文字列の分割
 ・文字列の桁揃え
+・文字列の検索
 """
 
 
@@ -94,3 +95,14 @@ print(test_str.rjust(10, '!')) # !!!!!!1234
 print(test_str.zfill(10)) # 0000001234
 
 print(test_str.zfill(3)) # 1234
+
+
+# 文字列の検索
+test_str = 'python-izm'
+print(test_str.startswith('python')) # True
+
+print(test_str.startswith('izm')) # False
+
+print('z' in test_str) # True
+
+print('s' in test_str) # False
