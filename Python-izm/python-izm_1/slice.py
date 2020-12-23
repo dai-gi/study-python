@@ -1,29 +1,39 @@
-# スライスの基本
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[:])
-print(test_list[::])
+# スライス
+test_slice = ['https', 'www', 'python', 'izm', 'com']
+print(test_slice[:]) # ['https', 'www', 'python', 'izm', 'com']
+print(test_slice[::]) # ['https', 'www', 'python', 'izm', 'com']
+print('-----------')
 
 
 # 要素の取得
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[:4])
+print(test_slice[:4]) # ['https', 'www', 'python', 'izm']
 
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[2:])
+print(test_slice[2:]) # ['python', 'izm', 'com']
 
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[3:5])
+print(test_slice[3:5]) # ['izm', 'com']
 
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[-1:]) #末尾から全ての要素
-print(test_list[:-1]) #末尾まで全ての要素
-print(test_list[::-1]) #末尾から全ての逆順要素
 
-test_list = ['https', 'www', 'python', 'izm', 'com']
-print(test_list[:999])
+# 末尾の要素を取得
+print(test_slice[-1:]) # [com']
+print('-----------')
+
+
+#末尾以外の全ての要素を取得
+print(test_slice[:-1]) # ['https', 'www', 'python', 'izm']
+print('-----------')
+
+
+# 逆順にして要素を取得
+print(test_slice[::-1]) # ['com', 'izm', 'python', 'www', 'https']
+print('-----------')
+
+
+# 全ての要素を取得
+print(test_slice[:999]) # ['https', 'www', 'python', 'izm', 'com']
+print('-----------')
 
 
 # 要素の代入
-test_list = ['https', 'www', 'python', 'izm', 'com']
-test_list[0:3] = ('WWW', 'PYTHON')
-print(test_list)
+print(test_slice) # ['https', 'www', 'python', 'izm', 'com']
+test_slice[0:3] = ('WWW', 'PYTHON')
+print(test_slice) # ['WWW', 'PYTHON', 'izm', 'com']
