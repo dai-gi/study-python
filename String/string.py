@@ -8,6 +8,7 @@
 ・改行
 ・コードの可読性を良くする
 ・文字列の置き換え
+・文字列の分割
 """
 
 
@@ -78,3 +79,6 @@ test_str = 'python-izm'
 print(test_str.replace('izm', 'ism')) # python-ism
 
 
+# 文字列の分割
+test_str = 'python-izm'
+print(test_str.split('-')) # ['python', 'izm']
