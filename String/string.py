@@ -9,6 +9,7 @@
 ・コードの可読性を良くする
 ・文字列の置き換え
 ・文字列の分割
+・文字列の桁揃え
 """
 
 
@@ -82,3 +83,14 @@ print(test_str.replace('izm', 'ism')) # python-ism
 # 文字列の分割
 test_str = 'python-izm'
 print(test_str.split('-')) # ['python', 'izm']
+
+
+# 文字列の桁揃え
+test_str = '1234'
+print(test_str.rjust(10, '0')) # 0000001234
+
+print(test_str.rjust(10, '!')) # !!!!!!1234
+
+print(test_str.zfill(10)) # 0000001234
+
+print(test_str.zfill(3)) # 1234
