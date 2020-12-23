@@ -7,6 +7,7 @@
 ・文字列の連結
 ・改行
 ・コードの可読性を良くする
+・文字列の置き換え
 """
 
 
@@ -15,7 +16,7 @@
 print("abc") # abc
 print('abc') # abc
 # NG
-print("abc') 
+# print("abc') 
 # 出力結果：SyntaxError: EOL while scanning string literal
 
 
@@ -25,7 +26,7 @@ print("abc" + "cde") # abccde
 # 「＊」は繰り返し
 print("abc" * 3) # abcabcabc
 # NG
-print("abc" + 3) # TypeError: can only concatenate str (not "int") to str
+# print("abc" + 3) # TypeError: can only concatenate str (not "int") to str
 
 
 # 改行：P69
@@ -48,10 +49,10 @@ print( """こんにちは。今日の晩ご飯は何でしたか？
 
 """
 # NG
-print("こんにちは。今日の晩ご飯は何でしたか？
-おいしかったですか？
-何カロリーでしたか？
-")
+# print("こんにちは。今日の晩ご飯は何でしたか？
+# おいしかったですか？
+# 何カロリーでしたか？
+# ")
 """
 出力結果：実行されない
 
@@ -72,7 +73,8 @@ print("何カロリーでしたか？")
 # 出力結果：こんにちは。今日の晩ご飯は何でしたか？おいしかったですか？何カロリーでしたか？
 
 
-# 文字列の置換
+# 文字列の置き換え
 test_str = 'python-izm'
-print(test_str.replace('izm', 'ism'))
+print(test_str.replace('izm', 'ism')) # python-ism
+
 
