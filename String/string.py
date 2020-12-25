@@ -12,6 +12,7 @@
 ・文字列の桁揃え
 ・文字列の検索
 ・大文字・小文字変換
+・先頭・末尾の削除
 """
 
 
@@ -114,3 +115,14 @@ test_str = 'Python-Izm.Com'
 print(test_str.upper()) # PYTHON-IZM.COM
 
 print(test_str.lower()) # python-izm.com
+
+
+# 先頭・末尾の削除
+test_str = '     python-izm.com'
+print(test_str) #      python-izm.com
+
+test_str = test_str.lstrip()
+print(test_str) # python-izm.com
+
+test_str = test_str.lstrip('python')
+print(test_str) # -izm.com
