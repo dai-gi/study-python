@@ -11,6 +11,7 @@
 ・文字列の分割
 ・文字列の桁揃え
 ・文字列の検索
+・大文字・小文字変換
 """
 
 
@@ -106,3 +107,10 @@ print(test_str.startswith('izm')) # False
 print('z' in test_str) # True
 
 print('s' in test_str) # False
+
+
+# 大文字・小文字変換
+test_str = 'Python-Izm.Com'
+print(test_str.upper()) # PYTHON-IZM.COM
+
+print(test_str.lower()) # python-izm.com
