@@ -14,6 +14,8 @@
 ・大文字・小文字変換
 ・先頭の削除
 ・末尾の削除
+・エスケープシーケンス
+・8進数・16進数に変換
 """
 
 
@@ -129,7 +131,6 @@ test_str = test_str.lstrip('python')
 print(test_str) # -izm.com
 
 
-
 # 末尾の削除
 test_str = 'python-izm.com     '
 print(test_str + '/') # python-izm.com     /
@@ -139,3 +140,32 @@ print(test_str + '/') # python-izm.com/
 
 test_str = test_str.rstrip("com")
 print(test_str) # python-izm.
+
+
+# @IT｜Python入門
+
+# エスケープシーケンス
+# シングルクォーテーション
+print('It\'s') # It's
+# タブ文字
+print('１行目\t２行目') # １行目  ２行目
+print('-----------')
+
+# 8進数・16進数に変換
+code_point = ord('a')
+print(code_point) # 97 <- コードポイント
+print('')
+# 文字列「a」のコードポイントを8進数値にする
+oct_code = oct(code_point)
+print(oct_code) # 0o141
+print('\141') # a
+print('')
+# 文字列「a」のコードポイントを16進数値にする
+hex_code = hex(code_point)
+print(hex_code) # 0x61
+print('\x61') # a
+print('')
+# 引数に渡したコードポイントに対応する文字列に変換する
+a_char = chr(code_point)
+print(a_char) # a
+print('-----------')
