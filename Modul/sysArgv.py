@@ -1,5 +1,4 @@
-
-
+# Python-izm｜コマンドライン引数
 import sys
 
 args = sys.argv
