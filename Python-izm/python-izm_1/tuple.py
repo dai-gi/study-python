@@ -1,4 +1,4 @@
-# タプル
+# Python-izm｜タプル
 import datetime
 
 def get_today():
@@ -8,9 +8,9 @@ def get_today():
 
     return value
 
-test_tuple = get_today()
 
-print(test_tuple)
-print(test_tuple[0])
-print(test_tuple[1])
-print(test_tuple[2])
+test_tuple = get_today()
+print(test_tuple) # (2020, 12, 26)
+print(test_tuple[0]) # 2020
+print(test_tuple[1]) # 12
+print(test_tuple[2]) # 26
