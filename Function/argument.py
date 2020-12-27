@@ -1,6 +1,6 @@
 # Python-izm｜可変長引数 
 
-# *args
+# *args(可変長位置引数)
 def test_args1(*args):
     print(args)
 
@@ -25,7 +25,7 @@ print('-----------')
 print('')
 
 
-# **kwargs
+# **kwargs(可変長キーワード引数)
 def test_args2(**kwargs):
     print(kwargs)
 
