@@ -29,3 +29,21 @@ for i in range(1,36+1):
         print("c")
     else:
         print("d")
+print('-----------')
+
+
+# if not
+# True(真)ならFalse(偽)・False(偽)ならTrue(真)
+names = ['一色', 'かわさき','かわさきしんじ','遠藤']
+target = 'かわさき'
+found = False
+
+for name in names:
+    if target in name:
+        found = True
+        print(f'発見: {name}')
+        continue
+    print('繰り返し処理を継続します')
+
+if not found: # <- foundがFalseなら下の処理を実行
+    print('見つかりませんでした')
