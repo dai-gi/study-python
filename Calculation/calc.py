@@ -14,7 +14,6 @@ print(test_integer * 10) # 1000
 print(test_integer / 10) # 10.0
 print('------------------')
 
-
 # 浮動小数点
 test_str = '100.5'
 print(float(test_str) + 100) # 200.5
@@ -33,3 +32,6 @@ print(test_complex.real) # 100.0 <- 実部
 # imagメソッド(複素数から虚部を取得)
 print(test_complex.imag) # 5.0 <- 虚部
 print('------------------')
+
+# 除算(割り切る)
+print(test_integer % 2 == 0) # True
