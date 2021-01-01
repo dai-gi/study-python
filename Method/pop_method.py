@@ -1,4 +1,5 @@
 # popメソッド(要素を取得して削除)
+list_1 = ['http://www.', 'python', '-', 'izm', '.', 'com']
 print(list_1) # ['http://www.', 'python', '-', 'izm', '.', 'com']
 print(list_1.pop(1)) # python
 
@@ -7,3 +8,17 @@ print(list_1.pop()) # com <- インデックスを指定しないとリストの
 
 print(list_1) # ['http://www.', '-', 'izm', '.']
 print('------------------')
+
+# @IT｜[Python入門] リストの操作
+intlist = list(range(5))
+
+while intlist:
+    print(intlist.pop())
+"""""""""""""""""
+出力結果：
+4
+3
+2
+1
+0
+"""""""""""""""""

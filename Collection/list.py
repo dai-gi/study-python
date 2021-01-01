@@ -9,10 +9,23 @@
 
 関数：
 ・list関数
+・sorted関数
+・reversed関数
 
 メソッド：
 ・appendメソッド
 ・insertメソッド
+・clearメソッド
+・countメソッド
+・indexメソッド
+・popメソッド
+・removeメソッド
+・sortメソッド
+・reverseメソッド
+・copyメソッド
+
+モジュール：
+・copy/deepcopy関数
 
 """""""""""""""""
 
