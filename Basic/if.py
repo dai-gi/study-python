@@ -47,3 +47,18 @@ for name in names:
 
 if not found: # <- foundがFalseなら下の処理を実行
     print('見つかりませんでした')
+
+
+# 文字列の比較
+a = '1926/12/05'
+b = '1926/12/50'
+c = '1926/12/5'
+# b == c：'1926/12/5' <-「5」の後には「0」が有るのと同義
+
+x = '1926/12/24'
+
+print(a <= x) # True
+print(b <= x) # False <- bはx以上
+print(c <= x) # False <- cはx以上
+
+
