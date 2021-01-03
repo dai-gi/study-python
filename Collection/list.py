@@ -11,6 +11,14 @@
 ・list関数
 ・sorted関数
 ・reversed関数
+・enumerate関数
+・zip関数
+・iter関数/next関数/nextメソッド
+・map関数
+・lambda(無名関数)
+・filter関数
+・all関数
+・any関数
 
 メソッド：
 ・appendメソッド
