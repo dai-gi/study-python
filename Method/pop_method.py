@@ -22,3 +22,19 @@ while intlist:
 1
 0
 """""""""""""""""
+
+# @IT
+# popメソッド
+mydict = {'foo': 'foo', 'bar': 'bar', 'baz': 'baz'}
+print(mydict) # {'foo': 'foo', 'bar': 'bar', 'baz': 'baz'}
+
+# キー'bar'に対応する項目を削除
+result = mydict.pop('bar')
+print(result) # bar
+
+# キー'bar'はないので、デフォルト値が戻り値になっている
+result = mydict.pop('bar', 'not found')
+print(result) # not found
+
+# キー'bar'はもう存在しないのでエラー
+# result = mydict.pop('bar') # KeyError: 'bar'

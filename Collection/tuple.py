@@ -1,4 +1,6 @@
 # Python-izm｜タプル
+# 異なる種類だが（あるいは同じ種類で）、関連性の有るデータをひとまとめにするためのもの
+
 import datetime
 
 def get_today():
