@@ -95,3 +95,88 @@ point3 = Point(5, 4)
 print(point1.difference(point2)) # 1.4142135623730951
 print(point1.difference()) # 1.4142135623730951
 print(point3.difference(point1)) # 5.0
+
+# クラスの属性
+class Point:
+    pass
+
+point1 = Point() # <- インスタンス化
+point1.x = 1.0 # <- インスタンス変数(アトリビュート)
+point1.y = 1.0
+point1.hello = lambda x: print('Hello', str(x))
+point1.hello('hello') # Hello hello
+
+# point2 = Point()
+# point2.hello('world') # AttributeError: 'Point' object has no attribute 'hello'
+
+# クラス変数の定義
+class MyClass1:
+    count = 0
+
+# クラス変数へのアクセス
+print(MyClass1.count) # 0
+
+instance = MyClass1()
+print(instance.count) # 0
+
+instance.count = 100
+print(instance.count) # 100
+print(MyClass1.count) # 0
+
+# クラスメソッド
+class MyClass2:
+    count = 0
+
+    def __init__(self):
+        MyClass2.count += 1
+        print(f'you made {MyClass2.count} instance(s)')
+
+    @classmethod  # <- クラスメソッド
+    def get_count(cls): # <-「self」ではなく、「cls」になる
+        print(cls.count)
+
+MyClass2.get_count() # 0
+
+instance1 = MyClass2() # you made 1 instance(s)
+instance2 = MyClass2() # you made 2 instance(s)
+instance2.get_count() # 2
+
+class MyClass3:
+    count = 0
+
+    def __init__(self):
+        MyClass3.count += 1
+        print(f'you made {MyClass3.count} instance(s)')
+
+    @classmethod
+    def get_count(cls):
+        cls.another_get_count()
+
+    another_get_count = classmethod(lambda cls: print('count:', cls.count))
+
+MyClass3.another_get_count() # count: 0
+instance1 = MyClass3() # you made 1 instance(s)
+instance1.another_get_count() # count: 1
+instance1.get_count() # count: 1
+
+# スタティックメソッド
+class MyClass4:
+    count = 0
+
+    def __init__(self):
+        MyClass4.count += 1
+        print(f'you made {MyClass4.count} instance(s)')
+
+    @classmethod  # クラスメソッドの定義
+    def get_count(cls):
+        cls.another_get_count()
+
+    another_get_count = classmethod(lambda cls: print('count:', cls.count))
+
+    @staticmethod
+    def static_get_count():
+        print('count:', MyClass4.count)
+
+MyClass4.static_get_count() # count: 0
+instance = MyClass4() # you made 1 instance(s)
+instance.static_get_count() # count: 1

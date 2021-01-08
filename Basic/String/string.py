@@ -94,3 +94,75 @@ print( "こんにちは。今日の晩ご飯は何でしたか？\
 # in演算子(文字列の検索)
 print('z' in test_str) # True
 print('s' in test_str) # False
+
+
+
+
+
+
+
+
+
+# @IT
+# Pyhtonの文字列の操作
+# find / rfindメソッド
+sample_str = 'find, rfind, index, rindex'
+print(sample_str.find('index'))
+print(sample_str.rfind('index'))
+print(sample_str.find('foo'))
+print(sample_str.index('find'))
+print(sample_str.rindex('find'))
+print(sample_str.index('foo'))
+
+# joinメソッド
+alpha_list = 'abc def ghi'.split()
+print(alpha_list)
+alpha_list = ','.join(alpha_list)
+print(alpha_list)
+
+alpha_list = 'abc def ghi'.split()
+print(alpha_list)
+alpha_list = ''.join(alpha_list)
+print(alpha_list)
+
+# isdigitメソッド(文字種の判定)
+num = 'not a number!'
+user_input = input('input number: ')
+num = int(user_input)
+print(num)
+
+num = 'not a number!'
+user_input = input('input number: ')
+if user_input.isdigit():
+    num = int(user_input)
+print(num)
+
+# swapcase／title／lowerメソッド
+sample_str = 'abc def GHI JKL'
+print(sample_str.swapcase())
+print(sample_str.title())
+print(sample_str.lower())
+
+# endswithメソッド
+sample_str = 'this is a sample string'
+print(sample_str.endswith('string'))
+
+sample_str = 'this is a sample string'
+print(sample_str.endswith(('sample', 'ing')))
+
+# ljust／centerメソッド
+sample_str = 'Python'
+print(sample_str.ljust(12, '+'))
+print(sample_str.center(12, '*'))
+
+import mojimoji
+
+zenkaku = '１２３４５ＡＢＣ'
+hankaku = mojimoji.zen_to_han(zenkaku)
+print(hankaku)  # 12345ABC
+
+import unicodedata
+
+text = u'ＡＢＣａｂｃ１２３カキク①（！％＠＃＄￥～'
+hankaku = unicodedata.normalize("NFKC", text)
+print(hankaku)
