@@ -5,7 +5,7 @@ from random import randint
 
 # num_str = input()
 n_str = str(randint(1000, 9999))
-print(n_str, end='')
+print(n_str)
 
 n_li = list(n_str)
 
@@ -14,22 +14,20 @@ def revers(x):
     
     n = 0
     m = 1
+    o = 2
     while True:
         a = x[n]
+        print
         b = x[l_n - m]
         x[n] = b
         x[l_n - m] = a
-        if l_n == 3:
-            break
-        elif l_n == 4:
-            break
-        elif l_n == 5:
-            break
-        elif l_n == 6:
-            break
         n += 1
         m += 1
-    
+        if l_n == o:
+            break
+        else:
+            o += 1
+        
     result = ''.join(x)
     print(result)
     
