@@ -1,50 +1,44 @@
 # coding: utf-8
 # 自分の得意な言語で
 # Let's チャレンジ！！
-from random import randint
 
-# num_str = input()
-n_str = str(randint(1000, 9999))
-print(n_str)
+# from random import randint
 
-n_li = list(n_str)
 
-def revers(x):
-    l_n = len(x)
+def reverse_and_calc(li):
+    n_1 = int(''.join(li))
+    # print(n_1)
     
-    n = 0
-    m = 1
-    o = 2
-    while True:
-        a = x[n]
-        print
-        b = x[l_n - m]
-        x[n] = b
-        x[l_n - m] = a
-        n += 1
-        m += 1
-        if l_n == o:
-            break
-        else:
-            o += 1
-        
-    result = ''.join(x)
-    print(result)
+    reversed_li = list(reversed(li))
+    n_2 = int(''.join(reversed_li))
+    # print(reversed_li)
     
-revers(n_li)    
-
-
-# while True:
-#     result = abs(int(num_str) + int(func_result))
-#     result_li = list(str(result))
-#     len_li1 = len(result_li)
-#     if result_li[0] == result_li[len_li1 - 1]:
-#         print(result)
-#         break
-#     else:
-#         num_str = result
-#         func_result = revers(list(str(result)))
+    result = n_1 + n_2
     
+    return result
+    
+# it-swarm-ja.tech｜「Pythonを使用して、整数を反転し、回文を確認します」の質問に対する回答を参照
+def jugement(number):
+    a="" # 空の文字列を代入
+    x=str(number) # 文字列の整数を生成
+    # print(x)
+    for i in range(len(x),0,-1): # len(x) = x変数の桁数
+        # print(i)
+        a+=x[i-1] # 「x」の値を末尾から「a」に累積代入(複合代入)
+        # print(x[i-1])
+        # print(a)
+    if a==x: # a = 「x」の値を反転した文字列、これを「x」と比較し同じであれば、回文と判定
+        # print(x)
+        # print(a)
+        return True
+    else:
+        print(x)
+        print(a)
+        return False
 
 
+# li_str = list(str(randint(1000, 9999)))
+li_str = list(input())
+num = reverse_and_calc(li_str)
 
+print(jugement(1222))
