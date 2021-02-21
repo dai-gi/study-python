@@ -1,1 +1,1 @@
-# study-ython
+# study-python
