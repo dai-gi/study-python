@@ -1,1 +1,1 @@
-# Pythonで学んだ事を記録しています
+# study-ython
